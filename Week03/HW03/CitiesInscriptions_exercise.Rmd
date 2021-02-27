@@ -22,7 +22,7 @@ opts_chunk$set(echo=TRUE,
                warning=FALSE)
 opts_knit$set(width=75)
 
-getwd()
+
 ```
 
 In this exercise you will map the ancient equivalent of Twitter data: the ancient inscriptions. Ancient people of class, education, and means liked to advertise their achievements and life milestones as well as their sorrows via the means of texts inscribed in stone. These epigraphic monuments were often placed near inhabited areas, roads, and gathering places where they were likely to attract the largest audience. The location of these self-expressions in space and time is a reasonable indicator of changing economic prosperity of the commissioning communities. In this exercise, you will explore how these ancient inscriptions spatially correspond to the distribution of ancient cities and settlements.  
@@ -225,7 +225,7 @@ insc_sf3035 <- st_transform(insc_sf4326,crs=3035)
 insc_ch <- st_convex_hull(st_union(insc_sf3035))
 
 # Create a buffer from a cluster of cities that fall within the convex hull 
-cities_it <- st_intersection(insc_ch, st_union(cities_5km))
+cities_it <- st_intersection(insc_ch, st_geometry(cities_5km))
 
 
 plot(cities_it)
