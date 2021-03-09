@@ -60,8 +60,13 @@ canopy <- raster("../../Week02/data/canopy.tif")
 # Read in the manhattan Landsat image multi-band raster
 manhattan <- brick("../../Week02/data/manhattan.tif")
 
+<<<<<<< HEAD
 # Compute the counts of all trees by hood
 tree_counts <- count(trees, nta)
+=======
+# Compute the counts of all trees by nta
+tree_counts <- ___(trees, nta)
+>>>>>>> 6fdfe22137327589f0f0ab2b7d51031fb177c6b8
 
 # Take a quick look
 head(tree_counts)
